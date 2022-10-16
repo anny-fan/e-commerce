@@ -22,7 +22,7 @@
     "vuetify": "^2.6.10"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.1.1",
+    "@nuxt/content": "^1",
     "@nuxtjs/vuetify": "^1.12.3"
   }
 }
