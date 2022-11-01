@@ -1,13 +1,32 @@
 <template>
   <div>
     <Nav />
-    <HomeCarousel :sale_items="sale_items" />
-    <Footer />
+    <home-carousel :sale_items="sale_items" />
+    <br />
+    <v-container>
+      <h1 class="text-md-h4 text-h6">Check these out</h1>
+      <br />
+      <product-slider :products="products" />
+      <br /><br /><br />
+      <newsletter />
+    </v-container>
+    <footer />
+    <scroll-top />
   </div>
 </template>
 
 <script>
+import ScrollTop from "../components/ScrollTop";
+import Newsletter from "../components/Newsletter";
+import ProductSlider from "../components/ProductSlider";
+import HomeCarousel from "../components/HomeCarousel";
 export default {
+  components: {
+    ScrollTop,
+    Newsletter,
+    ProductSlider,
+    HomeCarousel,
+  },
   async created() {
     this.products = await this.$content("products").fetch();
     this.sale_items = await this.$content("products")
