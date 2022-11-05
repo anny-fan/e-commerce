@@ -10,23 +10,13 @@
       <br /><br /><br />
       <newsletter />
     </v-container>
-    <footer />
+    <Footer />
     <scroll-top />
   </div>
 </template>
 
 <script>
-import ScrollTop from "../components/ScrollTop";
-import Newsletter from "../components/Newsletter";
-import ProductSlider from "../components/ProductSlider";
-import HomeCarousel from "../components/HomeCarousel";
 export default {
-  components: {
-    ScrollTop,
-    Newsletter,
-    ProductSlider,
-    HomeCarousel,
-  },
   async created() {
     this.products = await this.$content("products").fetch();
     this.sale_items = await this.$content("products")

@@ -21,12 +21,13 @@
               >
                 <h2 class="text-md-h3 text-h5">{{ p.name }}</h2>
                 <p class="text-md-h5 text-subtitle-1 primary--text mt-5">
-                  {{ p.price }}
+                  {{ $formatMoney(p.price) }}
                 </p>
                 <p class="text-md-body-2 mb-7">
                   {{ p.description }}
                 </p>
                 <v-btn
+                  :to="`/products/${p.id}`"
                   depressed
                   color="primary"
                   class="text-capitalize"
