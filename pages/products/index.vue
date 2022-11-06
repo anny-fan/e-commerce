@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <v-container>
       <v-row dense>
         <v-col md="3">
@@ -85,8 +84,6 @@
       </v-row>
     </v-container>
     <br />
-    <Footer />
-    <scroll-top />
   </div>
 </template>
 

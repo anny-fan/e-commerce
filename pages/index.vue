@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <home-carousel :sale_items="sale_items" />
     <br />
     <v-container>
@@ -10,8 +9,6 @@
       <br /><br /><br />
       <newsletter />
     </v-container>
-    <Footer />
-    <scroll-top />
   </div>
 </template>
 
