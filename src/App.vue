@@ -32,7 +32,12 @@ export default {
     <a href="#/non-existent-path">Broken Link</a>
   </header>
   
+  <h1 class="text-3xl font-bold underline">
+    Style
+  </h1>
+
   <component :is="currentView" />
+
 </template>
 
 <style scoped>
