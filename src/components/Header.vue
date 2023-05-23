@@ -4,10 +4,12 @@
       <span class="grow lg:flex-none lg:order-first text-2xl text-bold cursor-pointer">LOGO</span>
       <nav class="grow order-first flex" :class="{ open: toggleMenu }">
         <ul
-          class="menu absolute -start-full top-14 lg:flex lg:grow lg:justify-center bg-white lg:bg-transparent drop-shadow-sm lg:drop-shadow-none border lg:border-transparent h-screen lg:h-auto absolute lg:static flex-col lg:flex-row"
+          class="menu text-center lg:text-left h-fit w-full -start-full top-14 lg:flex lg:grow lg:justify-center bg-white lg:bg-transparent drop-shadow-sm lg:drop-shadow-none border lg:border-transparent absolute lg:static flex-col lg:flex-row"
         >
           <li class="mx-6 py-8">
-            <span class="nav-style"><rounter-link to="/" class="nav-link">HOME</rounter-link></span>
+            <span class="lg:nav-style"
+              ><rounter-link to="/" class="nav-link">HOME</rounter-link></span
+            >
           </li>
 
           <li
@@ -15,14 +17,14 @@
             v-on:mouseover="showCatalog = true"
             v-on:mouseleave="showCatalog = false"
           >
-            <span class="nav-style"
+            <span class="lg:nav-style"
               ><rounter-link to="/catalog" class="nav-link">CATALOG </rounter-link></span
             >
             <!-- catalog menu-->
             <Transition name="slide-fade">
               <div
                 v-if="showCatalog"
-                class="hidden lg:flex bg-white drop-shadow-sm border w-10/12 px-8 py-4 mx-auto opacity-1 absolute top-20 catelog-menu"
+                class="hidden lg:flex bg-white drop-shadow-sm border lg:w-10/12 px-8 py-4 mx-auto opacity-1 absolute top-20 catelog-menu"
               >
                 <div v-for="item in catalog" class="flex-1 mx-4">
                   <h3 class="text-bold text-slate-800 border-b mb-2 py-2 inline-block">
@@ -38,22 +40,22 @@
             </Transition>
           </li>
           <li class="mx-6 py-8">
-            <span class="nav-style"
+            <span class="lg:nav-style"
               ><rounter-link to="/about" class="nav-link">ABOUT</rounter-link></span
             >
           </li>
           <li class="mx-6 py-8">
-            <span class="nav-style"
+            <span class="lg:nav-style"
               ><rounter-link to="/service" class="nav-link">SERVICE</rounter-link></span
             >
           </li>
           <li class="mx-6 py-8">
-            <span class="nav-style"
+            <span class="lg:nav-style"
               ><rounter-link to="/news" class="nav-link">NEWS</rounter-link></span
             >
           </li>
           <li class="mx-6 py-8">
-            <span class="nav-style"
+            <span class="lg:nav-style"
               ><rounter-link to="/contact" class="nav-link"> CONTACT</rounter-link></span
             >
           </li>
