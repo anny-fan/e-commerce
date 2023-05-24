@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import BaseLayout from '@/components/BaseLayout.vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
@@ -8,28 +8,29 @@ import Footer from '@/components/Footer.vue'
 //   '/about': About
 // }
 
-export default {
-  components: {
-    BaseLayout,
-    Header,
-    Footer
-  }
-  // data() {
-  //   return {
-  //     currentPath: window.location.hash
-  //   }
-  // },
-  // computed: {
-  //   currentView() {
-  //     return routes[this.currentPath.slice(1) || '/'] || NotFound
-  //   }
-  // },
-  // mounted() {
-  //   window.addEventListener('hashchange', () => {
-  //     this.currentPath = window.location.hash
-  //   })
-  // }
-}
+// export default {
+//   components: {
+//     BaseLayout,
+//     Header,
+//     Footer,
+//     RouterLink
+//   }
+// data() {
+//   return {
+//     currentPath: window.location.hash
+//   }
+// },
+// computed: {
+//   currentView() {
+//     return routes[this.currentPath.slice(1) || '/'] || NotFound
+//   }
+// },
+// mounted() {
+//   window.addEventListener('hashchange', () => {
+//     this.currentPath = window.location.hash
+//   })
+// }
+// }
 </script>
 
 <template>
