@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <div>404</div>
-    <div>頁面不存在</div>
-  </div>
+  <div>signup</div>
 </template>
 
 <script setup></script>

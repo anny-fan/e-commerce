@@ -40,11 +40,15 @@ import Footer from '@/components/Footer.vue'
     </template>
 
     <template #default>
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
     </template>
 
     <template #footer>
-      <Footer></Footer>
+      <Footer v-show="$route.meta.show"></Footer>
     </template>
   </BaseLayout>
   <!-- <header>
@@ -55,4 +59,14 @@ import Footer from '@/components/Footer.vue'
   <!-- <component :is="currentView" /> -->
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+</style>

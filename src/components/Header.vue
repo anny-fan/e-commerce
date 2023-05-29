@@ -5,6 +5,7 @@ const showCatalog = ref(false)
 const toggleMenu = ref(false)
 
 const catalog = [
+  //#region
   {
     categories: 'Bullet CCTV Cameras',
     lists: [
@@ -45,19 +46,29 @@ const catalog = [
       'HD Cameras'
     ]
   }
+  //#endregion
 ]
 </script>
 
 <template>
   <div class="relative">
-    <div class="md:container md:mx-auto flex px-6 py-4 items-center">
-      <span class="grow lg:flex-none lg:order-first text-2xl text-bold cursor-pointer">LOGO</span>
-      <nav class="grow order-first flex" :class="{ open: toggleMenu }">
+    <div class="md:container md:mx-auto flex gap-4 px-6 py-4 items-center">
+      <router-link
+        to="/"
+        class="grow lg:flex-none lg:order-first text-2xl text-bold"
+        @click="toggleMenu = false"
+        >LOGO</router-link
+      >
+      <nav class="lg:grow order-first flex gap-2" :class="{ open: toggleMenu }">
         <ul
           class="menu text-center lg:text-left h-fit w-full -start-full top-14 lg:flex lg:grow lg:justify-center bg-white lg:bg-transparent drop-shadow-sm lg:drop-shadow-none border lg:border-transparent absolute lg:static flex-col lg:flex-row"
         >
           <li class="mx-6 py-8">
-            <span class="lg:nav-style"><RouterLink to="/" class="nav-link">HOME</RouterLink></span>
+            <span class="lg:nav-style"
+              ><router-link to="/" class="nav-link" @click="toggleMenu = false"
+                >HOME</router-link
+              ></span
+            >
           </li>
 
           <li
@@ -66,13 +77,15 @@ const catalog = [
             v-on:mouseleave="showCatalog = false"
           >
             <span class="lg:nav-style"
-              ><RouterLink to="/catalog" class="nav-link">CATALOG </RouterLink></span
+              ><router-link to="/catalog" class="nav-link" @click="toggleMenu = false"
+                >CATALOG
+              </router-link></span
             >
             <!-- catalog menu-->
             <Transition name="slide-fade">
               <div
                 v-if="showCatalog"
-                class="hidden lg:flex bg-white drop-shadow-sm border lg:w-10/12 px-8 py-4 mx-auto opacity-1 absolute top-20 catelog-menu"
+                class="hidden lg:flex bg-white drop-shadow-sm border lg:w-[975px] xl:w-[1200px] px-8 py-4 mx-auto opacity-1 absolute -left-[90px] lg:-left-[80px] xl:-left-[5%] 2xl:left-[5%] top-20 catelog-menu"
               >
                 <div v-for="item in catalog" class="flex-1 mx-4">
                   <h3 class="text-bold text-slate-800 border-b mb-2 py-2 inline-block">
@@ -89,22 +102,30 @@ const catalog = [
           </li>
           <li class="mx-6 py-8">
             <span class="lg:nav-style"
-              ><RouterLink to="/about" class="nav-link">ABOUT</RouterLink></span
+              ><router-link to="/about" class="nav-link" @click="toggleMenu = false"
+                >ABOUT</router-link
+              ></span
             >
           </li>
           <li class="mx-6 py-8">
             <span class="lg:nav-style"
-              ><RouterLink to="/service" class="nav-link">SERVICE</RouterLink></span
+              ><router-link to="/service" class="nav-link" @click="toggleMenu = false"
+                >SERVICE</router-link
+              ></span
             >
           </li>
           <li class="mx-6 py-8">
             <span class="lg:nav-style"
-              ><RouterLink to="/news" class="nav-link">NEWS</RouterLink></span
+              ><router-link to="/news" class="nav-link" @click="toggleMenu = false"
+                >NEWS</router-link
+              ></span
             >
           </li>
           <li class="mx-6 py-8">
             <span class="lg:nav-style"
-              ><RouterLink to="/contact" class="nav-link"> CONTACT</RouterLink></span
+              ><router-link to="/contact" class="nav-link" @click="toggleMenu = false">
+                CONTACT</router-link
+              ></span
             >
           </li>
         </ul>
@@ -118,8 +139,13 @@ const catalog = [
           <span class="block bg-black h-0.5 w-full rounded-lg origin-bottom-left"></span>
         </div>
       </nav>
+      <!-- user autenticate -->
+      <div class="flex-none flex gap-2 flex-row">
+        <router-link to="/login" class="nav-link" @click="toggleMenu = false">Login</router-link>
+        <router-link to="/signup" class="nav-link" @click="toggleMenu = false">Sign Up</router-link>
+      </div>
       <!-- cart -->
-      <span class="flex-none w-6 cursor-pointer"
+      <router-link to="/cart" class="flex-none w-6 cursor-pointer"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -135,7 +161,7 @@ const catalog = [
           c0-31.7,25.7-57.4,57.4-57.4s57.4,25.7,57.4,57.4v95.6H248.6V128.3z M133.9,262.1h76.5v38.3c0,10.6,8.6,19.1,19.1,19.1
           s19.1-8.6,19.1-19.1v-38.3h114.8v38.3c0,10.6,8.6,19.1,19.1,19.1s19.1-8.6,19.1-19.1v-38.3h76.5v306H133.9V262.1z"
           ></path></svg
-      ></span>
+      ></router-link>
     </div>
   </div>
 </template>
@@ -146,9 +172,7 @@ const catalog = [
     inset-inline-start: 0;
   }
 }
-.catelog-menu {
-  translate: -33%;
-}
+
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
 }

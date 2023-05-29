@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center bg-slate-50 p-20 flex flex-col items-center lg:flex-row">
+  <div class="flex items-center bg-slate-50 p-20 flex-col lg:flex-row">
     <span class="hidden lg:block text-2xl text-bold cursor-pointer">LOGO</span>
     <!-- sitemap -->
     <div class="grid grid-cols-2 gap-12 lg:flex lg:mx-auto text-center text-bold">
