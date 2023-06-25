@@ -1,0 +1,10 @@
+[
+    {
+        "Category":"['Indoor Cameras','Outdoor Cameras','Security Cameras']",
+        "Shop By Color":"['Black','White']",
+        "Shop By Lens": "['Zoom', 'Fixed']",
+        "Shop By Voltage": "['10 volts', '12 volts', '14 volts']",
+        "Shop By Price": "['100-200', '200-300', '300-400']",
+        "Shop By Brand": "['Lenskart', 'Bloom'"
+    }
+]

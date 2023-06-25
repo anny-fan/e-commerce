@@ -52,7 +52,7 @@ const catalog = [
 
 <template>
   <div class="relative">
-    <div class="md:container md:mx-auto flex gap-4 px-6 py-4 items-center">
+    <div class="container mx-auto flex gap-4 py-8 items-center">
       <router-link
         to="/"
         class="grow lg:flex-none lg:order-first text-2xl text-bold"

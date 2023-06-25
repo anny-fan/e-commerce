@@ -10,3 +10,8 @@
     @apply cursor-pointer hover:text-sky-700 relative block w-auto;
   }
 }
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
