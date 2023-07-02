@@ -62,13 +62,15 @@
           </div>
         </div>
         <div class="products grid lg:grid-cols-2 xl:grid-cols-3">
-          <div class="product" v-for="product in displayedProducts" :key="product.id">
-            <img :src="getImagePath(product.image)" :alt="product.name" />
-            <h3>{{ product.name }}</h3>
-            <p>{{ product.description }}</p>
-            <p>{{ product.price }}</p>
-            <button @click="addToCart(product)">Add to Cart</button>
-          </div>
+          <TransitionGroup name="fade" mode="out-in">
+            <div class="product" v-for="product in displayedProducts" :key="product.id">
+              <img :src="getImagePath(product.image)" :alt="product.name" />
+              <h3>{{ product.name }}</h3>
+              <p>{{ product.description }}</p>
+              <p>{{ product.price }}</p>
+              <button @click="addToCart(product)">Add to Cart</button>
+            </div>
+          </TransitionGroup>
         </div>
       </main>
     </div>

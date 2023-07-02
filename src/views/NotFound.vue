@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto">
     <div>404</div>
     <div>頁面不存在</div>
   </div>

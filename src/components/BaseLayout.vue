@@ -14,7 +14,7 @@ export default defineComponent({
     handleScroll() {
       const scrollBtn = this.$refs.scrollTopButton
 
-      if (window.scrollY > 0) {
+      if (window.scrollY > 200) {
         scrollBtn.classList.remove('invisible')
       } else {
         scrollBtn.classList.add('invisible')
@@ -38,7 +38,7 @@ export default defineComponent({
     <footer>
       <slot name="footer"></slot>
     </footer>
-    <div ref="scrollTopButton" class="sticky w-full flex justify-end bottom-0 pb-3 pr-5 transition">
+    <div ref="scrollTopButton" class="scroll-top fixed z-10 right-2 bottom-2 transition">
       <div class="text-gray-400 hover:text-blue-400 transition">
         <button @click="scrollToTop">Scroll to top</button>
       </div>

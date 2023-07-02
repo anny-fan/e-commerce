@@ -1,7 +1,25 @@
 <template>
   <div>
     <section>
-      <img src="@/assets/banner-1.webp" class="h-96 object-cover lg:h-full w-full" alt="" />
+      <swiper
+        :pagination="{
+          dynamicBullets: true
+        }"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide
+          ><img src="@/assets/banner-1.webp" class="h-96 object-cover lg:h-full w-full" alt=""
+        /></swiper-slide>
+        <swiper-slide
+          ><img
+            src="@/assets/banner-2.webp"
+            class="h-96 object-cover lg:h-full w-full"
+            alt="" /></swiper-slide
+        ><swiper-slide
+          ><img src="@/assets/banner-3.webp" class="h-96 object-cover lg:h-full w-full" alt=""
+        /></swiper-slide>
+      </swiper>
     </section>
     <section class="container mx-auto my-16 lg:my-32 px-16">
       <h1 class="text-3xl lg:text-5xl text-bold text-center mb-10 lg:mb-20">
@@ -45,6 +63,18 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue'
+// import required modules
+import { Pagination } from 'swiper'
+
+// Import Swiper styles
+import 'swiper/css'
+
+import 'swiper/css/pagination'
+
+const modules = [Pagination]
+</script>
 
 <style lang="scss" scoped></style>

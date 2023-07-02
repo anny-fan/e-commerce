@@ -61,7 +61,7 @@ const catalog = [
       >
       <nav class="lg:grow order-first flex gap-2" :class="{ open: toggleMenu }">
         <ul
-          class="menu text-center lg:text-left h-fit w-full -start-full top-14 lg:flex lg:grow lg:justify-center bg-white lg:bg-transparent drop-shadow-sm lg:drop-shadow-none border lg:border-transparent absolute lg:static flex-col lg:flex-row"
+          class="menu text-center lg:text-left h-fit w-full -start-full top-20 lg:flex lg:grow lg:justify-center bg-white lg:bg-transparent drop-shadow-sm lg:drop-shadow-none border lg:border-transparent absolute z-20 lg:static flex-col lg:flex-row"
         >
           <li class="mx-6 py-8">
             <span class="lg:nav-style"

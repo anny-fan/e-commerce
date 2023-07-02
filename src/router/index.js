@@ -12,7 +12,7 @@ export default new createRouter({
   routes: [
     { path: '/', component: Home, meta: { show: true } },
     { path: '/home', name: 'home', component: Home, meta: { show: true } },
-    { path: '/catalog', name: 'catalog', component: Catalog, meta: { show: false } },
+    { path: '/catalog', name: 'catalog', component: Catalog, meta: { show: true } },
     { path: '/cart', name: 'cart', component: Catalog, meta: { show: true } },
     { path: '/login', name: 'login', component: Login, meta: { show: false } },
     { path: '/signup', name: 'signup', component: SignUp, meta: { show: false } },
